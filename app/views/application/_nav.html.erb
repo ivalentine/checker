@@ -1,12 +1,12 @@
 <nav>
-  <span class="site-name">Checker &#10004;</span>
+  <div class="site-name">Checker &#10004;</div>
   <ul class="nav navbar-right nav-tabs">
     <% if user_signed_in? %>
-      <strong><%= current_user.email %></strong>
+      <li role="presentation"><strong><%= current_user.email %></strong></li>
       <li role="presentation"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
       <li role="presentation"><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
     <% else %>
-      <li role="presentation"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></li>
+      <li role="presentation"><%= link_to "Join", new_user_registration_path, :class => 'navbar-link' %></li>
       <li role="presentation"><%= link_to "Sign in", new_user_session_path, :class => 'navbar-link' %></li>
     <% end %>
   </ul>
