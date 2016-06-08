@@ -15,6 +15,16 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
+  <%= f.fields_for :tasks do |task| %>
+    <li>
+      Name:       <%= task.text_field :name %>
+      Due:        <%= date_select :task, :due %>
+      Completed:  <%= check_box_tag(:completed) %>
+                  <% label_tag(:completed, "completed") %>
+    </li>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

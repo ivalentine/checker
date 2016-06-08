@@ -5,5 +5,11 @@
   <%= @list.name %>
 </p>
 
+<% @list.tasks.each do |task| %>
+  <p><%= task.name %></p>
+  <p><%= task.due %></p>
+  <p><%= task.completed %></p>
+<% end %>
+
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>
