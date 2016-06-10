@@ -18,10 +18,9 @@
 
   <%= f.fields_for :tasks do |task| %>
     <li>
-      Name:       <%= task.text_field :name %>
-      Due:        <%= date_select :task, :due %>
-      Completed:  <%= check_box_tag(:completed) %>
-                  <% label_tag(:completed, "completed") %>
+      <%= task.label :name %>       <%= task.text_field :name %>
+      <%= task.label :due %>        <%= task.datetime_select :due, ampm: true %>
+      <%= task.label :completed %>  <%= task.check_box :completed %>
     </li>
   <% end %>
 
