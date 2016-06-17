@@ -1,19 +1,22 @@
-<nav>
-  <div class="site-name">Checker &#10004;</div>
-  <ul class="nav navbar-right nav-tabs">
-    <% if user_signed_in? %>
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand">Checker &#10004;</div>
+    <ul class="nav navbar-right nav-tabs">
+      <% if user_signed_in? %>
       <!-- <li role="presentation"><strong><%= current_user.email %></strong></li> -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li role="presentation"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>          
+          <li role="presentation"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
         </ul>
       </li>
 
       <li role="presentation"><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
-    <% else %>
+      <% else %>
       <li role="presentation"><%= link_to "Join", new_user_registration_path, :class => 'navbar-link' %></li>
       <li role="presentation"><%= link_to "Sign in", new_user_session_path, :class => 'navbar-link' %></li>
-    <% end %>
-  </ul>
+      <% end %>
+    </ul>
+
+  </div>
 </nav>
