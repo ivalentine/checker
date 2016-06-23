@@ -1,6 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<table>
+<% @lists.each do |list| %>
+  <article class="col-sm-3">
+    <h1><%= list.name %></h1>
+    <ul>
+      <% list.tasks.each do |task| %>
+      <li><%= task.name %> <small>due <%= task.due %></small></li>
+      <% end %>
+    </ul>
+  </article>
+<% end %>
+
+<aside class="col-sm-3">
+<p>
+  <span class="glyphicon glyphicon-plus-sign"></span> <%= link_to 'New list', new_list_path %>
+</p>
+</aside>
+
+<!-- <table>
 
   <tbody>
     <% @lists.each do |list| %>
@@ -19,8 +36,6 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
-
-<%= link_to 'New List', new_list_path %>
