@@ -11,20 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, class: "hidden" %>
+    <%= f.text_field :name, placeholder: "Name" %>
   </div>
 
   <%= f.fields_for :tasks do |task| %>
     <li>
-      <%= task.label :name %>       <%= task.text_field :name %>
+      <%= task.label :name, class: "hidden" %>       <%= task.text_field :name %>
       <%= task.label :due %>        <%= task.datetime_select :due, ampm: true %>
       <%= task.label :completed %>  <%= task.check_box :completed %>
     </li>
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", class: "btn btn-default" %>
   </div>
 <% end %>
