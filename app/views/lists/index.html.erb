@@ -1,23 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<% @lists.each do |list| %>
-  <article class="col-sm-3 list-container">
-    <h1><%= list.name %></h1>
-    <ul>
-      <% list.tasks.each do |task| %>
-      <li><%= task.name %>
-        <% if !task.due.nil? %>
-        <small>due <%= task.due %></small>
-        <% end %>
-      </li>
-      <% end %>
-    </ul>
-  </article>
-<% end %>
+<%= render @lists %>
 
 <aside class="col-sm-3" id="new-list-link-container">
 <p>
-  <span class="glyphicon glyphicon-plus-sign"></span> <%= link_to 'New list', new_list_path, class: "btn btn-default", id: "new-list", remote: true %>
+  <%= link_to 'New list', new_list_path, class: "btn btn-default", id: "new-list", remote: true %>
 </p>
 </aside>
 
