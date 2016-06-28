@@ -1,4 +1,4 @@
-<article class="col-sm-3 list-container">
+<article class="col-sm-3 list-container" id="new-list-container">
   <%= form_for(@list, remote: true) do |f| %>
   <% if @list.errors.any? %>
   <div id="error_explanation">
@@ -28,5 +28,5 @@
   <div class="actions">
     <%= f.submit "Submit", class: "btn btn-default" %>
   </div>
-  <% end %>  
+  <% end %>
 </article>
