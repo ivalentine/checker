@@ -27,6 +27,12 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
+
+    # respond_to do |format|
+    #   format.html { render :edit }
+    #   format.js   # render lists/edit.js.erb
+    # end
+
   end
 
   # POST /lists
