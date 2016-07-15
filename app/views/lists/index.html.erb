@@ -1,41 +1,9 @@
-<p id="notice"><%= notice %></p>
+<%= render current_user.lists %>
 
-<% @lists.each do |list| %>
-  <article class="col-sm-3">
-    <h1><%= list.name %></h1>
-    <ul>
-      <% list.tasks.each do |task| %>
-      <li><%= task.name %> <small>due <%= task.due %></small></li>
-      <% end %>
-    </ul>
-  </article>
-<% end %>
-
-<aside class="col-sm-3">
+<aside class="col-sm-3" id="new-list-link-container">
 <p>
-  <span class="glyphicon glyphicon-plus-sign"></span> <%= link_to 'New list', new_list_path %>
+  <%= link_to 'New list', new_list_path, class: "btn btn-default", id: "new-list", remote: true %>
 </p>
 </aside>
-
-<!-- <table>
-
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.name %></td>
-        <td>
-          <% list.tasks.each do |task| %>
-            <p><%= task.name %></p>
-            <p><%= task.due %></p>
-            <p><%= task.completed %></p>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: "Are you sure you want to delete \"#{list.name}\"?" } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
 
 <br>

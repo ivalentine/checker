@@ -17,10 +17,22 @@ class ListsController < ApplicationController
   def new
     @list = List.new
     3.times { @list.tasks.build }
+
+    respond_to do |format|
+      format.html { render 'new' }
+      format.js   # render lists/new.js.erb
+    end
+
   end
 
   # GET /lists/1/edit
   def edit
+
+    # respond_to do |format|
+    #   format.html { render :edit }
+    #   format.js   # render lists/edit.js.erb
+    # end
+
   end
 
   # POST /lists

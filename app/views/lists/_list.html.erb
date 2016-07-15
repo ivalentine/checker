@@ -1,0 +1,17 @@
+<article class="col-sm-3 list-container">
+  <h1><%= list.name %></h1>
+  <ul>
+    <% list.tasks.each do |task| %>
+    <li><%= task.name %>
+      <% if !task.due.nil? %>
+      <ul>
+        <li>
+          <small>due <%= task.due %></small>
+        </li>        
+      </ul>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Edit', edit_list_path(list) %>
+</article>
