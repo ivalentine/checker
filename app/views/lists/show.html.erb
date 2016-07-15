@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @list.name %>
-</p>
+</h1>
 
-<% @list.tasks.each do |task| %>
-  <p><%= task.name %></p>
-  <p><%= task.due %></p>
-  <p><%= task.completed %></p>
-<% end %>
+<ul>
+  <% @list.tasks.each do |task| %>
+  <% if task.completed %>
+  <s>
+    <% end %>
+    <li><%= task.name %></li>
+    <small>due <%= task.due %></small>
+    <% if task.completed %>
+  </s>
+  <% end %>
+  <% end %>  
+</ul>
 
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

@@ -4,7 +4,11 @@
     <% list.tasks.each do |task| %>
     <li><%= task.name %>
       <% if !task.due.nil? %>
-      <small>due <%= task.due %></small>
+      <ul>
+        <li>
+          <small>due <%= task.due %></small>
+        </li>        
+      </ul>
       <% end %>
     </li>
     <% end %>
