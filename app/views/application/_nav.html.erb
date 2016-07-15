@@ -1,6 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <div class="navbar-brand">Checker &#10004;</div>
+    <div class="navbar-brand">
+      <%= link_to "Listchecker &#10004;".html_safe, root_path %>
+    </div>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
       <li role="presentation" class="dropdown">
