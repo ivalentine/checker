@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def letsencrypt
-    render text: 'ODoC3TRbenl-bRLw0gFwdqJy6NwWmxG7nTxog8gh-CQ.KBCxhm07gJJ40aNejiEpGkOD4ZBOGGeCf34xYuDMbMg'
+    render text: 'X__qO7ZLZ30XBfPLeGJS6JhGSIjH8ruuEJFhVcjQSWo.KBCxhm07gJJ40aNejiEpGkOD4ZBOGGeCf34xYuDMbMg'
   end
-  
+
 end
