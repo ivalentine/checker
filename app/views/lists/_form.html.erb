@@ -41,5 +41,6 @@
 
   <div class="actions form-group">
     <%= f.submit "Submit", class: "btn btn-default" %>
+    <%= button_to "Delete list", list_path, class: "btn btn-warning", data: { confirm: "Are you sure you want to delete \"#{@list.name}\"?" }, method: :delete %>
   </div>
 <% end %>
