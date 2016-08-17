@@ -5,7 +5,19 @@
 
   <div class="form-group">
     <div class="field col-xs-3">
-      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+      <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First name" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="field col-xs-3">
+      <%= f.text_field :last_name, class: "form-control", placeholder: "Last name" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="field col-xs-3">
+      <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
     </div>
   </div>
 
