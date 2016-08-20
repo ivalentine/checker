@@ -9,9 +9,12 @@
   </head>
   <body>
     <%= render 'nav' %>
-    <div class="container">
-      <p id="notice"><%= notice %></p>
-      <%= yield %>
+    <div class="container-fluid">
+      <%= render 'sidebar' if current_user %>
+      <div class="container">
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

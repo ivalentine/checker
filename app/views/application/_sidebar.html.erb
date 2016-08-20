@@ -1,0 +1,12 @@
+<aside class="sidebar col-md-3">
+  <div class="lists">
+    <ul>
+      <% current_user.lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="new-list">
+    <%= link_to "Create list", new_list_path %>
+  </div>
+</aside>
