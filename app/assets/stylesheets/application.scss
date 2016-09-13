@@ -4,10 +4,17 @@
 
 body {
   padding-top: 60px;
- }
+}
 
 .sidebar {
   background-color: green;
+  height: 90vh;
+  position: relative;
+}
+
+#create-list {
+  position: absolute;
+  bottom: 0;
 }
 
 .navbar-brand a {
