@@ -3,13 +3,23 @@
 @import "bootstrap";
 
 body {
-  padding-top: 60px;
+  padding-top: 51px;
+}
+
+#app-body {
+  padding-left: 0px;
 }
 
 .sidebar {
-  background-color: green;
-  height: 90vh;
+  background-color: gainsboro;
+  height: 92vh;
+  padding-left: 0px;
+  padding-right: 0px;
   position: relative;
+}
+
+#home {
+  background-color: floralwhite;
 }
 
 #create-list {
