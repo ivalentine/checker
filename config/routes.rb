@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources :users
   resources :tasks
 
-  get '.well-known/acme-challenge/:id' => 'application#letsencrypt'
-
   root 'lists#index'
 
 end
