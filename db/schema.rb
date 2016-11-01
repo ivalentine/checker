@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816214205) do
+ActiveRecord::Schema.define(version: 20161101180124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "letsencrypt_plugin_challenges", force: :cascade do |t|
+    t.text     "response"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "letsencrypt_plugin_settings", force: :cascade do |t|
+    t.text     "private_key"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "lists", force: :cascade do |t|
     t.string   "name"
