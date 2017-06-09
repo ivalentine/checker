@@ -1,10 +1,10 @@
-# Listchecker
+# Taskdash
 
 ## About this app
 
-Listchecker is a to-do list app.
+Taskdash is a to-do list app.
 
-Listchecker was created by [Ian Valentine](http://ivalentine.net/), and is available under the terms of the MIT license.
+Taskdash was created by [Ian Valentine](http://ivalentine.net/), and is available under the terms of the MIT license.
 
 ## Technical details
 * Front end: [Bootstrap](https://getbootstrap.com/)
